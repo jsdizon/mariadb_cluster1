@@ -56,7 +56,7 @@ docker run -dP --name node1 -h node1 --link node2:node2 jsdizon/mariadb_cluster1
 docker run -dP --name node1 -h node1 --link node3:node3 jsdizon/mariadb_cluster1 --wsrep-cluster-name=galera_cluster --wsrep-cluster-address=gcomm://node3
 ```
 ### 3 Docker Servers
-Same the concept on single Docker server, but the difference is that on the command "--wsrep-cluster-address=gcomm://", you will specify the ip address of the Docker server. For example the container on `:Docker1 10.10.10.1:` was destroyed, the new container will be joining on the `Docker2 10.10.10.2` or `Docker3 10.10.10.3` and vice versa.
+Same the concept on single Docker server, but the difference is that on the command "--wsrep-cluster-address=gcomm://", you will specify the ip address of the Docker server. For example the container on `Docker1 10.10.10.1` was destroyed, the new container will be joining on the `Docker2 10.10.10.2` or `Docker3 10.10.10.3` and vice versa.
 
 
 ### You can check the cluster by running this command on the running containers, just change the $node to the name of the running containers.
