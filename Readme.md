@@ -1,6 +1,18 @@
 ### MariaDB cluster with Galera on Ubuntu 14.04
 
+To have the image.
+```
+Docker pull jsdizon/mariadb_cluster1
+```
 
+To create the image.
+
+```
+git clone https://github.com/jsdizon/mariadb_cluster1.git
+
+docker build -t mariadbcluster
+
+```
 
 ### Single Docker Server
 Assuming we have a Docker server and we will create a container using these commands to create a mariaDB cluster, ip address of the Docker server is not that important on this because the 3 containers will depend only on the hostname of the containers and the "--link" command in order to communicate with each other.
